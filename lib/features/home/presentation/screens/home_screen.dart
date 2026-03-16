@@ -37,6 +37,7 @@ class _HomeScreenState extends State<HomeScreen> {
             highlightColor: Colors.transparent,
           ),
           child: BottomNavigationBar(
+
             items: [
               BottomNavigationBarItem(
                 icon: NavBarIcon(

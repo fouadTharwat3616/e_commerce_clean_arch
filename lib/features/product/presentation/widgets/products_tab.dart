@@ -1,3 +1,4 @@
+import 'package:ecommerce/core/widgets/search_bar_with_cart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -22,7 +23,7 @@ class ProductsTab extends StatelessWidget {
                 fit: BoxFit.cover,
               ),
               SizedBox(height: 18.h),
-              //const SearchBarWithCart(),
+              const SearchBarWithCart(),
               SizedBox(height: 16.h),
              /* Expanded(
                 child: BlocBuilder<ProductsCubit, ProductsState>(
