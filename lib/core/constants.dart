@@ -4,6 +4,8 @@
   static const String registerEndpoint = 'auth/signup';
   static const String categoriesEndpoint = 'categories';
   static const String brandsEndpoint = 'categories';
+  static const String productEndpoint = 'products';
+
 
 
 

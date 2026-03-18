@@ -2,12 +2,14 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:ecommerce/core/di/service_locator.dart';
 import 'package:ecommerce/core/theming/colors_manager.dart';
 import 'package:ecommerce/core/utils/ui_utils.dart';
+import 'package:ecommerce/features/product/domain/entities/product.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ProductItem extends StatefulWidget {
-  const ProductItem();
+  final Product _product;
+  ProductItem(this._product);
 
   @override
   State<ProductItem> createState() => _ProductItemState();
@@ -41,7 +43,7 @@ class _ProductItemState extends State<ProductItem> {
                 ClipRRect(
                   borderRadius: BorderRadius.circular(15),
                   child: CachedNetworkImage(
-                    imageUrl: 'assets/images/cart_icon.png',
+                    imageUrl: widget._product.imageCover!,
                     height: 128.h,
                     width: 191.w,
                     fit: BoxFit.cover,
@@ -69,7 +71,7 @@ class _ProductItemState extends State<ProductItem> {
             Padding(
               padding: EdgeInsets.only(left: 8.w),
               child: Text(
-                'title',
+                widget._product.title!,
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,
                 style: smallDarkTitleMediumStyle,
@@ -81,7 +83,7 @@ class _ProductItemState extends State<ProductItem> {
               child: Row(
                 children: [
                   Text(
-                    'EGP 1100',
+                    'EGP ${widget._product.price}',
                     maxLines: 1,
                     style: smallDarkTitleMediumStyle,
                   ),
@@ -95,7 +97,7 @@ class _ProductItemState extends State<ProductItem> {
               child: Row(
                 children: [
                   Text(
-                    'Review',
+                    'Review (${widget._product.ratingsAverage})',
                     maxLines: 1,
                     style: smallDarkTitleMediumStyle?.copyWith(fontSize: 12.sp),
                   ),
