@@ -14,6 +14,7 @@ class ProductAPIREmoteDataSource implements ProductRemoteDataSource{
      final response =await _dio.get(APIConstants.productEndpoint);
      return ProductResponse.fromJson(response.data);
     }catch(_){
+
       throw const RemoteException('Failed to get products');
     }
   }

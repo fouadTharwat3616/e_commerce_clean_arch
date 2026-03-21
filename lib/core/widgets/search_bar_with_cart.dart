@@ -1,4 +1,5 @@
 import 'package:ecommerce/core/widgets/search_text_field.dart';
+import 'package:ecommerce/features/cart/presentation/screens/cart_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -13,7 +14,7 @@ class SearchBarWithCart extends StatelessWidget {
         SizedBox(width: 24.w),
         InkWell(
           onTap: () {
-
+            Navigator.of(context).pushNamed(CartScreen.routeName);
           },
           child: ImageIcon(
             const AssetImage('assets/images/cart_icon.png'),

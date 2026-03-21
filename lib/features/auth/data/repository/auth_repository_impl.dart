@@ -23,10 +23,18 @@ class AuthRepositoryImpl implements AuthRepository {
     try {
       final response = await _remoteDataSource.register(requestData);
       if (response.token != null && response.user != null) {
-        _localDataSource.saveToken(response.token!);
+        await _localDataSource.saveToken(response.token!);
+        await _localDataSource.saveName(response.user!.name);
+        await _localDataSource.saveEmail(response.user!.email);
+
+        if (requestData.phone != null) {
+          await _localDataSource.savePhone(requestData.phone!);
+          await _localDataSource.savePassword(requestData.password);
+        }
+
         return Right(response.user!);
       } else {
-        return const Left(Failure());
+        return const Left(Failure("Registration failed: Missing user data"));
       }
     } on AppException catch (exception) {
       return Left(Failure(exception.message));
@@ -39,6 +47,8 @@ class AuthRepositoryImpl implements AuthRepository {
       final response = await _remoteDataSource.login(requestData);
       if (response.token != null && response.user != null) {
          _localDataSource.saveToken(response.token!);
+         _localDataSource.saveName(response.user!.name);
+         _localDataSource.saveEmail(response.user!.email);
         return Right(response.user!);
       } else {
         return const Left(Failure());

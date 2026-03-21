@@ -1,8 +1,10 @@
 import 'package:ecommerce/core/theming/theme_manager.dart';
 import 'package:ecommerce/features/auth/presentation/screens/login_screen.dart';
 import 'package:ecommerce/features/auth/presentation/screens/register_screen.dart';
+import 'package:ecommerce/features/cart/presentation/screens/cart_screen.dart';
 import 'package:ecommerce/features/home/presentation/screens/home_screen.dart';
 import 'package:ecommerce/features/product/presentation/screens/product_details_screen.dart';
+import 'package:ecommerce/splash.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -19,12 +21,14 @@ class ECommerceApp extends StatelessWidget {
         title: 'E-Commerce',
         theme: ThemeManager.mainTheme,
         routes: {
+          SplashScreen.routeName:(context) => SplashScreen(),
           LoginScreen.routeName: (_) => const LoginScreen(),
           RegisterScreen.routeName: (_) => const RegisterScreen(),
           HomeScreen.routeName: (_) => const HomeScreen(),
-          ProductDetailsScreen.routeName:(_) => const ProductDetailsScreen()
+          ProductDetailsScreen.routeName:(_) => const ProductDetailsScreen(),
+          CartScreen.routeName:(_) => const CartScreen()
         },
-        initialRoute: LoginScreen.routeName,
+        initialRoute: SplashScreen.routeName,
       ),
     );
   }
