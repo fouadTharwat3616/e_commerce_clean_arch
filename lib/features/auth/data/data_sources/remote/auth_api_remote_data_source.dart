@@ -20,7 +20,7 @@ class AuthAPIRemoteDataSource implements AuthRemoteDataSource {
         APIConstants.registerEndpoint,
         data: requestBody.toJson(),
       );
-      return RegisterResponse.fromJson (response.data);
+      return RegisterResponse.fromJson(response.data);
     } catch (exception) {
       var message = 'Failed to register';
       if (exception is DioException) {

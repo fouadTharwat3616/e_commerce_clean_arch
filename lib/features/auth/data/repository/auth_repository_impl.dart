@@ -24,6 +24,8 @@ class AuthRepositoryImpl implements AuthRepository {
       final response = await _remoteDataSource.register(requestData);
       if (response.token != null && response.user != null) {
         _localDataSource.saveToken(response.token!);
+        _localDataSource.saveName(response.user!.name);
+        _localDataSource.saveEmail(response.user!.email);
         return Right(response.user!);
       } else {
         return const Left(Failure());
@@ -39,6 +41,8 @@ class AuthRepositoryImpl implements AuthRepository {
       final response = await _remoteDataSource.login(requestData);
       if (response.token != null && response.user != null) {
          _localDataSource.saveToken(response.token!);
+         _localDataSource.saveName(response.user!.name);
+         _localDataSource.saveEmail(response.user!.email);
         return Right(response.user!);
       } else {
         return const Left(Failure());

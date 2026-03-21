@@ -16,7 +16,6 @@ class AuthSharedPrefLocalDataSource implements AuthLocalDataSource {
       throw const LocalException('Failed to save token');
     }
   }
-
   @override
   String getToken()  {
     try {
@@ -25,4 +24,49 @@ class AuthSharedPrefLocalDataSource implements AuthLocalDataSource {
       throw const LocalException('Failed to get token');
     }
   }
+
+  @override
+  Future<void> saveName(String name) {
+    try{
+     return _preference.setString(CacheConstants.name, name);
+    }catch(_)
+    {
+      throw const LocalException('Failed to save name');
+    }
+  }
+
+  @override
+  String getName() {
+    try{
+     return _preference.getString(CacheConstants.name)!;
+    }catch(_)
+    {
+      throw const LocalException('Failed to get name');
+    }
+  }
+
+  @override
+  Future<void> saveEmail(String email) {
+    try{
+      return _preference.setString(CacheConstants.email, email);
+    }catch(_)
+    {
+      throw const LocalException('Failed to save Email');
+    }
+  }
+  @override
+  String getEmail() {
+    try{
+      return _preference.getString(CacheConstants.email)!;
+    }catch(_)
+    {
+      throw const LocalException('Failed to get Email');
+    }
+  }
+
+
+
+
+
+
 }
