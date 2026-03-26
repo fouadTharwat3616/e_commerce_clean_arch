@@ -22,7 +22,7 @@ A professional E-Commerce application built with **Flutter**, strictly following
 
 ## 🎥 App Demo
 <p align="center">
-  <video src="https://github.com/user-attachments/assets/6bf16840-835b-4351-9bb3-fe307e8a912c" width="320" autoplay loop muted playsinline></video>
+ <video src="https://github.com/user-attachments/assets/9d7095bb-114d-42b4-b768-19bed3f862bb" width="320" autoplay loop muted playsinline></video> 
 </p>
 
 ---
