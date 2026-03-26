@@ -19,9 +19,10 @@ A professional E-Commerce application built with **Flutter**, strictly following
 </p>
 
 ---
+
 ## 🎥 App Demo
 <p align="center">
-  <video src="screenshots/Demo5.mp4" width="320" autoplay loop muted playsinline>
+  <video src="https://github.com/fouadTharwat3616/e_commerce_clean_arch/raw/refs/heads/main/screenshots/Demo5.mp4" width="320" autoplay loop muted playsinline>
     Your browser does not support the video tag.
   </video>
 </p>
