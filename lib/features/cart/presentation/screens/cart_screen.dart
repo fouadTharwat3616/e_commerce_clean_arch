@@ -54,10 +54,15 @@ class _CartScreenState extends State<CartScreen> {
             } else if (state is DeleteFromCartError) {
               UIUtils.hideLoading(context);
               UIUtils.showMessage(state.message);
-            } else if (state is UpdateCartSuccess ||
-                state is DeleteFromCartSuccess) {
+            } else if (state is UpdateCartSuccess) {
               UIUtils.hideLoading(context);
+              UIUtils.showMessage('Product Quantity Updated Successfully');
             }
+            else if(state is DeleteFromCartSuccess)
+              {
+                UIUtils.hideLoading(context);
+                UIUtils.showMessage('Product Deleted Successfully');
+              }
           }, builder: (context, state) {
             if (state is GetCartLoading) {
               return const LoadingIndicator();

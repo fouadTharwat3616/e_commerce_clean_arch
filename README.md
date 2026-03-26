@@ -11,10 +11,19 @@ A professional E-Commerce application built with **Flutter**, strictly following
   <img src="screenshots/Home_Screen.png" width="24%" />
 </p>
 <p align="center">
-  <img src="screenshots/Products.png" width="24%" />
-  <img src="screenshots/Cart_screen.png" width="24%" />
-  <img src="screenshots/WishList.png" width="24%" />
-  <img src="screenshots/Profile.png" width="24%" />
+  <img src="screenshots/Products.png" width="19%" />
+  <img src="screenshots/Product_details_screen.png" width="19%" />
+  <img src="screenshots/Cart_screen.png" width="19%" />
+  <img src="screenshots/WishList.png" width="19%" />
+  <img src="screenshots/Profile.png" width="19%" />
+</p>
+
+---
+## 🎥 App Demo
+<p align="center">
+  <video src="screenshots/Demo5.mp4" width="320" autoplay loop muted playsinline>
+    Your browser does not support the video tag.
+  </video>
 </p>
 
 ---
@@ -56,7 +65,7 @@ The project is organized into three main layers:
 ## ⚙️ How to Run
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com
+   git clone https://github.com/fouadTharwat3616/e_commerce_clean_arch
 2. **Install dependencies:**
    ```bash
    flutter pub get
@@ -67,6 +76,6 @@ The project is organized into three main layers:
    ```bash
    flutter run
 
-👨‍💻 Author
+## 👨‍💻 Author
 Fouad Tharwat
 https://github.com/fouadTharwat3616/e_commerce_clean_arch
