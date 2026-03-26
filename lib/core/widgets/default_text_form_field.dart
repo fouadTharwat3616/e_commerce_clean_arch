@@ -38,8 +38,8 @@ class _DefaultTextFormFieldState extends State<DefaultTextFormField> {
             ? IconButton(
                 onPressed: () => setState(() => isObscure = !isObscure),
                 icon: isObscure
-                    ? const Icon(Icons.visibility_outlined)
-                    : const Icon(Icons.visibility_off_outlined),
+                    ? const Icon(Icons.visibility_off_outlined)
+                    : const Icon(Icons.visibility_outlined),
               )
             : null,
         enabledBorder: OutlineInputBorder(
